@@ -1,3 +1,58 @@
 [gd_scene format=3 uid="uid://cb6v5jlxijimi"]
 
-[node name="Node2D" type="Node2D" unique_id=1064493740]
+[ext_resource type="Texture2D" uid="uid://byqtu7tcid31f" path="res://assest/Counter/2cabinet.png" id="1_feb5d"]
+[ext_resource type="Texture2D" uid="uid://2colklkf4r2j" path="res://assest/floorswalls_LRK.png" id="2_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://gb2byeipaw7y" path="res://assest/Counter/3gas.png" id="2_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://no4jp5plyem6" path="res://assest/Counter/4sink.png" id="3_fc0e3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2o6t"]
+atlas = ExtResource("1_feb5d")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fc0e3"]
+atlas = ExtResource("2_e2o6t")
+region = Rect2(15.676561, 165.85587, 63.875145, 57.482773)
+
+[node name="main" type="Node2D" unique_id=1064493740]
+
+[node name="station" type="TextureRect" parent="." unique_id=1487010145]
+custom_minimum_size = Vector2(1024, 512)
+offset_right = 1728.0
+offset_bottom = 512.0
+texture = SubResource("AtlasTexture_e2o6t")
+expand_mode = 1
+
+[node name="GAS" type="TextureRect" parent="." unique_id=613303904]
+custom_minimum_size = Vector2(1.11, 0)
+offset_left = -370.0
+offset_top = -80.0
+offset_right = 59.0
+offset_bottom = 488.0
+texture = ExtResource("2_fc0e3")
+
+[node name="TextureRect" type="TextureRect" parent="GAS" unique_id=910305288]
+layout_mode = 0
+offset_left = 2014.0
+offset_top = -46.0
+offset_right = 2451.0
+offset_bottom = 564.0
+texture = ExtResource("3_fc0e3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1556071701]
+layer = -2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1593061875]
+offset_left = -419.0
+offset_top = -1007.0
+offset_right = 2184.0
+offset_bottom = 537.0
+texture = SubResource("AtlasTexture_fc0e3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1036594140]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=542008686]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=893453479]
+layout_mode = 2
