@@ -1,4 +1,6 @@
 TextureRect
+Button
+Node2D
 Label
 HBoxContainer
 CanvasLayer
