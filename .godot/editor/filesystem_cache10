@@ -1,7 +1,7 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1793817818
+::res://::1793861880
+game.tscn::PackedScene::4908355042824398888::1793824322::0::1::::<><><>0<>0<><>::uid://byqtu7tcid31f::::res://assest/Counter/2cabinet.png<>res://assest/floorswalls_LRK.png<>uid://gb2byeipaw7y::::res://assest/Counter/3gas.png<>uid://no4jp5plyem6::::res://assest/Counter/4sink.png<>uid://w4mfeo0pawbb::::res://assest/Furniter/7trashcan.png<>uid://blggjv5dwv4fd::::res://assest/Ingredient/food/tomato1.png
 icon.svg::CompressedTexture2D::4894139100784923173::1793807285::1793807290::1::::<><><>0<>0<>0d315e60c63fd85e105952bb3760b7e5<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-game.tscn::PackedScene::4908355042824398888::1793817818::0::1::::<><><>0<>0<><>::uid://byqtu7tcid31f::::res://assest/Counter/2cabinet.png<>res://assest/floorswalls_LRK.png<>uid://gb2byeipaw7y::::res://assest/Counter/3gas.png<>uid://no4jp5plyem6::::res://assest/Counter/4sink.png<>uid://w4mfeo0pawbb::::res://assest/Furniter/7trashcan.png
 README.md::TextFile::-1::1793807511::0::1::::<><><>0<>0<><>::
 ::res://addons/::1793807428
 ::res://addons/godot_super-wakatime/::1793807428
@@ -84,7 +84,7 @@ warn.png::CompressedTexture2D::3634696429856717045::1793811236::1793811249::1:::
 7trashcan.png::CompressedTexture2D::1604759280663786507::1793811236::1793811248::1::::<><><>0<>0<>1e8b0115cd06f7235549d578726c0c70<>res://.godot/imported/7trashcan.png-5aff173cedd39089e374b10a4ee04197.ctex::
 8trashcan-small.png::CompressedTexture2D::8301321972195767761::1793811236::1793811248::1::::<><><>0<>0<>646dd7062ab6649e2b79ef7e72094fe0<>res://.godot/imported/8trashcan-small.png-e941488cc0ce311667af80b8d213759a.ctex::
 ::res://assest/Ingredient/::1793811236
-::res://assest/Ingredient/food/::1793818492
+::res://assest/Ingredient/food/::1793818498
 1carrot-chop.png::CompressedTexture2D::7121712859789177249::1793811236::1793811249::1::::<><><>0<>0<>ef37f93065dff83b65082ef9bfa83bb1<>res://.godot/imported/1carrot-chop.png-80c5e1ae75bbb26c627558b60411be03.ctex::
 1carrot.png::CompressedTexture2D::5330475669788213502::1793811236::1793811249::1::::<><><>0<>0<>ecacde3df40807adc90c20b1f4cc1791<>res://.godot/imported/1carrot.png-b7a50343c50ea027f2f630fdf3f83714.ctex::
 001_orange.png::CompressedTexture2D::4734643899671956155::1793818221::1793818225::1::::<><><>0<>0<>e39c40879db3b24d49973bc9a520917a<>res://.godot/imported/001_orange.png-419f40f4a5cdcfad29950efe4673ceea.ctex::
