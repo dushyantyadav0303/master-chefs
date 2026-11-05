@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cb6v5jlxijimi"]
 
-[ext_resource type="Texture2D" uid="uid://byqtu7tcid31f" path="res://assest/Counter/2cabinet.png" id="1_feb5d"]
-[ext_resource type="Texture2D" uid="uid://gb2byeipaw7y" path="res://assest/Counter/3gas.png" id="2_fc0e3"]
-[ext_resource type="Texture2D" uid="uid://no4jp5plyem6" path="res://assest/Counter/4sink.png" id="3_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://do281alyc2d3w" path="res://assest/sprites/wooden-counter-large.png" id="1_80cx4"]
+[ext_resource type="Texture2D" uid="uid://ckgb3qloa7n0a" path="res://assest/sprites/stove.png" id="2_e8heu"]
+[ext_resource type="Texture2D" uid="uid://bhlx8xtuagqj1" path="res://assest/sprites/sink.png" id="3_rvswv"]
 [ext_resource type="Texture2D" uid="uid://w4mfeo0pawbb" path="res://assest/Furniter/7trashcan.png" id="5_7jktm"]
 [ext_resource type="Texture2D" uid="uid://bupptber8tcib" path="res://assest/Ingredient/food/3cabbage.png" id="6_eow3j"]
 [ext_resource type="Texture2D" uid="uid://blggjv5dwv4fd" path="res://assest/Ingredient/food/tomato1.png" id="6_ryrav"]
@@ -15,9 +15,11 @@
 [ext_resource type="Texture2D" uid="uid://b3v804goj1tof" path="res://assest/Ingredient/food/I_strawberry.png" id="11_7sc4i"]
 [ext_resource type="Texture2D" uid="uid://bsonyghxhhfxd" path="res://assest/Ingredient/food/I_strawberry_jam.png" id="11_215e1"]
 [ext_resource type="Texture2D" uid="uid://byobmyw3wa53k" path="res://assest/Ingredient/food/potato1.png" id="13_7sc4i"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e2o6t"]
-atlas = ExtResource("1_feb5d")
+[ext_resource type="Texture2D" uid="uid://blw22xxp07gwy" path="res://assest/sprites/plate.png" id="16_e8heu"]
+[ext_resource type="Texture2D" uid="uid://cypn2866fm5yb" path="res://assest/sprites/toaster.png" id="17_boyg6"]
+[ext_resource type="Texture2D" uid="uid://s48bn3mgh04g" path="res://Dish/Cheese_Salami_Sandwich.png" id="18_rvswv"]
+[ext_resource type="Texture2D" uid="uid://cky0rkewmnqpr" path="res://assest/sprites/coffee-machine.png" id="19_boyg6"]
+[ext_resource type="Texture2D" uid="uid://dcw4ft76n5e7" path="res://assest/sprites/white-mug.png" id="20_e36ub"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fc0e3"]
 region = Rect2(15.676561, 165.85587, 63.875145, 57.482773)
@@ -200,7 +202,39 @@ region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aa0lp"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tb2lt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cfc7e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7irnc"]
+bg_color = Color(0.4425918, 0.32000142, 0.237154, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.05799634, 0.057996362, 0.057996273, 1)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e36ub"]
+bg_color = Color(0.94725865, 0.9613634, 0.96051437, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.42951676, 0.123736344, 0.086470194, 1)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
 [node name="main" type="Node2D" unique_id=1064493740]
+
+[node name="clients manager" type="Node2D" parent="." unique_id=951247173]
 
 [node name="station" type="TextureRect" parent="." unique_id=1487010145]
 custom_minimum_size = Vector2(1024, 512)
@@ -210,7 +244,7 @@ offset_right = 2017.0
 offset_bottom = 1153.0
 scale = Vector2(0.6124808, 0.8004267)
 mouse_filter = 2
-texture = SubResource("AtlasTexture_e2o6t")
+texture = ExtResource("1_80cx4")
 expand_mode = 1
 
 [node name="GAS" type="TextureRect" parent="." unique_id=613303904]
@@ -221,7 +255,7 @@ offset_right = 457.0
 offset_bottom = 1162.0
 scale = Vector2(0.6124808, 0.8004267)
 mouse_filter = 2
-texture = ExtResource("2_fc0e3")
+texture = ExtResource("2_e8heu")
 
 [node name="SINK" type="TextureRect" parent="." unique_id=910305288]
 offset_left = 1347.0
@@ -230,16 +264,29 @@ offset_right = 1784.0
 offset_bottom = 1167.0
 scale = Vector2(0.6124808, 0.8004267)
 mouse_filter = 2
-texture = ExtResource("3_fc0e3")
+texture = ExtResource("3_rvswv")
+
+[node name="TextureRect2" type="TextureRect" parent="SINK" unique_id=1411835388]
+layout_mode = 0
+offset_left = -1665.3583
+offset_top = -279.85074
+offset_right = -1311.3583
+offset_bottom = 319.14926
+texture = ExtResource("19_boyg6")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1556071701]
 layer = -2
 
 [node name="Bg wall" type="TextureRect" parent="CanvasLayer" unique_id=1593061875]
-offset_left = -28.0
-offset_top = -48.0
-offset_right = 1855.0
-offset_bottom = 1043.0
+anchors_preset = -1
+anchor_left = 0.423
+anchor_top = 0.94200003
+anchor_right = 0.423
+anchor_bottom = 0.94200003
+offset_left = -522.296
+offset_top = -634.416
+offset_right = 1360.704
+offset_bottom = 456.58398
 texture = SubResource("AtlasTexture_fc0e3")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1036594140]
@@ -295,29 +342,29 @@ text = "Trash
 [node name="ingredients layer" type="Node2D" parent="." unique_id=352588690]
 
 [node name="cabbage" type="TextureRect" parent="ingredients layer" unique_id=721913923]
-offset_left = 547.00006
-offset_top = 589.0
-offset_right = 587.00006
-offset_bottom = 629.0
+offset_left = 532.0
+offset_top = 774.0
+offset_right = 572.0
+offset_bottom = 814.0
 rotation = 0.5081313
 scale = Vector2(1.5473635, 1.4428091)
 texture = ExtResource("6_eow3j")
 
 [node name="cabbage 2" type="TextureRect" parent="ingredients layer/cabbage" unique_id=606693851]
 layout_mode = 0
-offset_left = -43.881115
-offset_top = -4.731041
-offset_right = -8.278942
-offset_bottom = 26.24363
+offset_left = -20.603588
+offset_top = -15.460587
+offset_right = 14.998581
+offset_bottom = 15.514084
 scale = Vector2(2.1032567, 2.2912254)
 texture = ExtResource("6_eow3j")
 
 [node name="cabbage Button" type="Button" parent="ingredients layer/cabbage" unique_id=528471570]
 layout_mode = 0
-offset_left = -24.108154
-offset_top = 26.049356
-offset_right = 50.891846
-offset_bottom = 57.049355
+offset_left = -7.9550476
+offset_top = 17.444458
+offset_right = 67.04495
+offset_bottom = 48.444458
 rotation = -0.5191127
 scale = Vector2(0.6685864, 0.8833603)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_g13lv")
@@ -333,10 +380,10 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_8ibmq")
 text = "Cabbage"
 
 [node name="chesse" type="TextureRect" parent="ingredients layer" unique_id=487534405]
-offset_left = 588.0
-offset_top = 583.00006
-offset_right = 620.0
-offset_bottom = 615.00006
+offset_left = 604.53326
+offset_top = 776.00006
+offset_right = 636.53326
+offset_bottom = 808.00006
 scale = Vector2(3.278317, 2.7580779)
 texture = ExtResource("7_j5wjh")
 
@@ -361,10 +408,10 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_r62pu")
 text = "cheese"
 
 [node name="corn" type="TextureRect" parent="ingredients layer" unique_id=1902272870]
-offset_left = 690.0
-offset_top = 547.0
-offset_right = 734.6347
-offset_bottom = 585.1648
+offset_left = 713.0
+offset_top = 749.0
+offset_right = 757.6347
+offset_bottom = 787.1648
 scale = Vector2(2.5988762, 2.8036304)
 texture = ExtResource("8_vef74")
 
@@ -378,10 +425,10 @@ texture = ExtResource("8_iotsf")
 
 [node name="Button" type="Button" parent="ingredients layer/corn" unique_id=575179152]
 layout_mode = 0
-offset_left = 3.463035
-offset_top = 0.71336794
-offset_right = 50.52642
-offset_bottom = 56.52312
+offset_left = 6.9260707
+offset_top = 3.2101288
+offset_right = 53.989456
+offset_bottom = 59.019882
 scale = Vector2(0.84210885, 0.6469476)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_klri6")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_eu6ph")
@@ -397,10 +444,10 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_qpefm")
 text = "corn"
 
 [node name="mayo" type="TextureRect" parent="ingredients layer" unique_id=408519868]
-offset_left = 976.0
-offset_top = 498.00003
-offset_right = 1016.0
-offset_bottom = 538.0
+offset_left = 992.53326
+offset_top = 691.0
+offset_right = 1032.5332
+offset_bottom = 731.0
 scale = Vector2(4.380934, 4.727255)
 texture = ExtResource("9_lc2xo")
 
@@ -425,10 +472,10 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_qpefm")
 text = "mayo"
 
 [node name="ketchup" type="TextureRect" parent="ingredients layer" unique_id=453921955]
-offset_left = 1049.0
-offset_top = 494.0
-offset_right = 1089.0
-offset_bottom = 534.0
+offset_left = 1065.5333
+offset_top = 687.0
+offset_right = 1105.5333
+offset_bottom = 727.0
 scale = Vector2(5.642853, 5.0008235)
 texture = ExtResource("10_215e1")
 
@@ -453,10 +500,10 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_qpefm")
 text = "ketchup"
 
 [node name="strawberry jar" type="TextureRect" parent="ingredients layer" unique_id=1637478118]
-offset_left = 757.0
-offset_top = 557.8498
-offset_right = 891.0
-offset_bottom = 696.8498
+offset_left = 773.53326
+offset_top = 750.8498
+offset_right = 907.53326
+offset_bottom = 889.8498
 rotation = -0.43077627
 scale = Vector2(1.0696023, 1.2180266)
 texture = ExtResource("11_215e1")
@@ -499,10 +546,10 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_qpefm")
 text = "jam"
 
 [node name="potato" type="TextureRect" parent="ingredients layer" unique_id=448793239]
-offset_left = 898.0
-offset_top = 571.0
-offset_right = 998.0
-offset_bottom = 659.0
+offset_left = 914.53326
+offset_top = 764.0
+offset_right = 1014.53326
+offset_bottom = 852.0
 texture = ExtResource("13_7sc4i")
 
 [node name="Button" type="Button" parent="ingredients layer/potato" unique_id=54497605]
@@ -525,10 +572,10 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_lgcjo")
 text = "potato"
 
 [node name="Tomato" type="TextureRect" parent="." unique_id=1047858127]
-offset_left = 377.00018
-offset_top = 589.0
-offset_right = 483.00018
-offset_bottom = 703.0
+offset_left = 397.0
+offset_top = 787.0
+offset_right = 503.0
+offset_bottom = 901.0
 rotation = -0.18053761
 scale = Vector2(0.64, 0.6)
 texture = SubResource("AtlasTexture_sjobi")
@@ -565,22 +612,22 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_i2p71")
 text = "tomato"
 
 [node name="bread" type="TextureRect" parent="." unique_id=750333128]
-offset_left = 1236.0
-offset_top = 456.0
-offset_right = 1334.0
-offset_bottom = 546.0
+offset_left = 309.53326
+offset_top = 756.0
+offset_right = 366.87885
+offset_bottom = 795.9612
 rotation = 0.26942185
 scale = Vector2(1.7700318, 2.0244443)
 texture = ExtResource("7_eow3j")
 
 [node name="Button" type="Button" parent="bread" unique_id=940909559]
 layout_mode = 0
-offset_left = -3.1605844
-offset_top = 22.58326
-offset_right = 50.839417
-offset_bottom = 53.58326
+offset_left = 9.262184
+offset_top = 12.62482
+offset_right = 55.262184
+offset_bottom = 35.62482
 rotation = -0.25333259
-scale = Vector2(1.680038, 1.4409785)
+scale = Vector2(0.7075495, 0.83421415)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xa8c5")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5b14r")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_bnpwn")
@@ -593,3 +640,80 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_iu0sx")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_xex6t")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_aa0lp")
 text = "Bread"
+
+[node name="plate" type="Node2D" parent="." unique_id=45250385]
+position = Vector2(980, 686)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=989871711]
+offset_left = 895.0
+offset_top = 619.0
+offset_right = 1060.0
+offset_bottom = 759.0
+texture = ExtResource("16_e8heu")
+
+[node name="Griller" type="Node2D" parent="." unique_id=2002165796]
+position = Vector2(1192, 661)
+
+[node name="TextureRect2" type="TextureRect" parent="Griller" unique_id=388382325]
+offset_left = -139.0
+offset_top = -80.99994
+offset_right = 105.0
+offset_bottom = 146.00006
+scale = Vector2(1.2522691, 1.1579947)
+texture = ExtResource("17_boyg6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Griller" unique_id=1292561343]
+position = Vector2(-7.0000114, -23.00003)
+scale = Vector2(0.12783168, 0.17723875)
+texture = ExtResource("18_rvswv")
+
+[node name="griller button" type="Button" parent="Griller" unique_id=460291194]
+offset_left = -79.0
+offset_top = -70.0
+offset_right = 98.0
+offset_bottom = 34.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tb2lt")
+
+[node name="coffee machine" type="Node2D" parent="." unique_id=1666037600]
+
+[node name="Sprite2D" type="Sprite2D" parent="coffee machine" unique_id=391223593]
+position = Vector2(499, 561.00006)
+scale = Vector2(4.0733128, 4.2754)
+texture = ExtResource("20_e36ub")
+
+[node name="Button" type="Button" parent="coffee machine" unique_id=1516104853]
+offset_left = 339.0
+offset_top = 494.0
+offset_right = 528.0
+offset_bottom = 674.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cfc7e")
+
+[node name="ProgressBar" type="ProgressBar" parent="coffee machine" unique_id=1088197282]
+offset_left = 352.0
+offset_top = 441.0
+offset_right = 517.0
+offset_bottom = 478.0
+theme_override_styles/background = SubResource("StyleBoxFlat_7irnc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_e36ub")
+value = 50.0
+show_percentage = false

@@ -1,6 +1,8 @@
-Button
-TextureRect
 Node2D
+ProgressBar
+Button
+Sprite2D
+TextureRect
 Label
 HBoxContainer
 CanvasLayer
