@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cb6v5jlxijimi"]
 
 [ext_resource type="Texture2D" uid="uid://do281alyc2d3w" path="res://assest/sprites/wooden-counter-large.png" id="1_80cx4"]
+[ext_resource type="Script" uid="uid://b3ucn2jnb8e3i" path="res://game.gd" id="1_hb5m1"]
 [ext_resource type="Texture2D" uid="uid://ckgb3qloa7n0a" path="res://assest/sprites/stove.png" id="2_e8heu"]
 [ext_resource type="Texture2D" uid="uid://bhlx8xtuagqj1" path="res://assest/sprites/sink.png" id="3_rvswv"]
 [ext_resource type="Texture2D" uid="uid://w4mfeo0pawbb" path="res://assest/Furniter/7trashcan.png" id="5_7jktm"]
@@ -19,10 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://cypn2866fm5yb" path="res://assest/sprites/toaster.png" id="17_boyg6"]
 [ext_resource type="Texture2D" uid="uid://s48bn3mgh04g" path="res://Dish/Cheese_Salami_Sandwich.png" id="18_rvswv"]
 [ext_resource type="Texture2D" uid="uid://cky0rkewmnqpr" path="res://assest/sprites/coffee-machine.png" id="19_boyg6"]
+[ext_resource type="Script" uid="uid://xij8u4hegkr3" path="res://griller.gd" id="19_x5p1p"]
 [ext_resource type="Texture2D" uid="uid://dcw4ft76n5e7" path="res://assest/sprites/white-mug.png" id="20_e36ub"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fc0e3"]
-region = Rect2(15.676561, 165.85587, 63.875145, 57.482773)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eow3j"]
 bg_color = Color(0.6901961, 0.49411765, 0.8862745, 0.64705884)
@@ -233,8 +232,7 @@ corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
 [node name="main" type="Node2D" unique_id=1064493740]
-
-[node name="clients manager" type="Node2D" parent="." unique_id=951247173]
+script = ExtResource("1_hb5m1")
 
 [node name="station" type="TextureRect" parent="." unique_id=1487010145]
 custom_minimum_size = Vector2(1024, 512)
@@ -259,14 +257,14 @@ texture = ExtResource("2_e8heu")
 
 [node name="SINK" type="TextureRect" parent="." unique_id=910305288]
 offset_left = 1347.0
-offset_top = 557.0
+offset_top = 554.99994
 offset_right = 1784.0
-offset_bottom = 1167.0
+offset_bottom = 1167.4988
 scale = Vector2(0.6124808, 0.8004267)
 mouse_filter = 2
 texture = ExtResource("3_rvswv")
 
-[node name="TextureRect2" type="TextureRect" parent="SINK" unique_id=1411835388]
+[node name="coffee machine" type="TextureRect" parent="SINK" unique_id=1411835388]
 layout_mode = 0
 offset_left = -1665.3583
 offset_top = -279.85074
@@ -283,11 +281,10 @@ anchor_left = 0.423
 anchor_top = 0.94200003
 anchor_right = 0.423
 anchor_bottom = 0.94200003
-offset_left = -522.296
-offset_top = -634.416
-offset_right = 1360.704
-offset_bottom = 456.58398
-texture = SubResource("AtlasTexture_fc0e3")
+offset_left = -499.29602
+offset_top = -655.416
+offset_right = 1383.704
+offset_bottom = 435.58398
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1036594140]
 anchors_preset = -1
@@ -303,26 +300,26 @@ metadata/_edit_use_anchors_ = true
 [node name="sandwich sold" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=893453479]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_eow3j")
-text = "Total sandwich sold: 5"
+text = "Total sandwich sold: --  "
 
 [node name="balance" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=542008686]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_7jktm")
-text = "balance : 250 Rs"
+text = "balance : --- Rs"
 
 [node name="trash bin" type="TextureRect" parent="." unique_id=1495667593]
-offset_left = 1670.0001
-offset_top = 769.0
-offset_right = 1710.0001
-offset_bottom = 821.0
+offset_left = 1611.0001
+offset_top = 758.0
+offset_right = 1651.0001
+offset_bottom = 810.0
 scale = Vector2(4.5919228, 5.287087)
 texture = ExtResource("5_7jktm")
 
 [node name="Button" type="Button" parent="." unique_id=323272408]
-offset_left = 1681.0
-offset_top = 1000.0
-offset_right = 1845.0
-offset_bottom = 1044.0
+offset_left = 1622.0
+offset_top = 982.0
+offset_right = 1786.0
+offset_bottom = 1036.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxEmpty_7jktm")
@@ -387,7 +384,7 @@ offset_bottom = 808.00006
 scale = Vector2(3.278317, 2.7580779)
 texture = ExtResource("7_j5wjh")
 
-[node name="Button" type="Button" parent="ingredients layer/chesse" unique_id=1763868774]
+[node name="chesse button" type="Button" parent="ingredients layer/chesse" unique_id=1763868774]
 layout_mode = 0
 offset_left = 6.4057255
 offset_top = 9.426832
@@ -423,7 +420,7 @@ offset_right = 43.463036
 offset_bottom = 40.356678
 texture = ExtResource("8_iotsf")
 
-[node name="Button" type="Button" parent="ingredients layer/corn" unique_id=575179152]
+[node name="corn Button" type="Button" parent="ingredients layer/corn" unique_id=575179152]
 layout_mode = 0
 offset_left = 6.9260707
 offset_top = 3.2101288
@@ -451,7 +448,7 @@ offset_bottom = 731.0
 scale = Vector2(4.380934, 4.727255)
 texture = ExtResource("9_lc2xo")
 
-[node name="Button" type="Button" parent="ingredients layer/mayo" unique_id=864802158]
+[node name="mayo Button" type="Button" parent="ingredients layer/mayo" unique_id=864802158]
 layout_mode = 0
 offset_left = 13.695711
 offset_top = 14.807748
@@ -479,7 +476,7 @@ offset_bottom = 727.0
 scale = Vector2(5.642853, 5.0008235)
 texture = ExtResource("10_215e1")
 
-[node name="Button" type="Button" parent="ingredients layer/ketchup" unique_id=325408698]
+[node name="ketchup Button" type="Button" parent="ingredients layer/ketchup" unique_id=325408698]
 layout_mode = 0
 offset_left = 13.645588
 offset_top = 15.997372
@@ -524,7 +521,7 @@ offset_right = 89.25256
 offset_bottom = 99.96148
 texture = ExtResource("11_7sc4i")
 
-[node name="Button" type="Button" parent="ingredients layer/strawberry jar" unique_id=561986815]
+[node name="jam Button" type="Button" parent="ingredients layer/strawberry jar" unique_id=561986815]
 layout_mode = 0
 offset_left = 47.7421
 offset_top = 36.569912
@@ -552,7 +549,7 @@ offset_right = 1014.53326
 offset_bottom = 852.0
 texture = ExtResource("13_7sc4i")
 
-[node name="Button" type="Button" parent="ingredients layer/potato" unique_id=54497605]
+[node name="potato Button" type="Button" parent="ingredients layer/potato" unique_id=54497605]
 layout_mode = 0
 offset_left = 22.0
 offset_top = 34.0
@@ -571,7 +568,7 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_id03l")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_lgcjo")
 text = "potato"
 
-[node name="Tomato" type="TextureRect" parent="." unique_id=1047858127]
+[node name="Tomato" type="TextureRect" parent="ingredients layer" unique_id=1047858127]
 offset_left = 397.0
 offset_top = 787.0
 offset_right = 503.0
@@ -580,7 +577,7 @@ rotation = -0.18053761
 scale = Vector2(0.64, 0.6)
 texture = SubResource("AtlasTexture_sjobi")
 
-[node name="Tomato" type="TextureRect" parent="Tomato" unique_id=1941617783]
+[node name="Tomato" type="TextureRect" parent="ingredients layer/Tomato" unique_id=1941617783]
 layout_mode = 0
 offset_left = 55.323547
 offset_top = 29.407349
@@ -590,7 +587,7 @@ rotation = -0.18053761
 scale = Vector2(0.64, 0.6)
 texture = SubResource("AtlasTexture_sjobi")
 
-[node name="Button" type="Button" parent="Tomato" unique_id=1225924816]
+[node name="tomto Button" type="Button" parent="ingredients layer/Tomato" unique_id=1225924816]
 layout_mode = 0
 offset_left = -24.313416
 offset_top = -6.4278564
@@ -611,7 +608,7 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_vaj68")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_i2p71")
 text = "tomato"
 
-[node name="bread" type="TextureRect" parent="." unique_id=750333128]
+[node name="bread" type="TextureRect" parent="ingredients layer" unique_id=750333128]
 offset_left = 309.53326
 offset_top = 756.0
 offset_right = 366.87885
@@ -620,7 +617,7 @@ rotation = 0.26942185
 scale = Vector2(1.7700318, 2.0244443)
 texture = ExtResource("7_eow3j")
 
-[node name="Button" type="Button" parent="bread" unique_id=940909559]
+[node name="bread Button" type="Button" parent="ingredients layer/bread" unique_id=940909559]
 layout_mode = 0
 offset_left = 9.262184
 offset_top = 12.62482
@@ -641,10 +638,10 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_xex6t")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_aa0lp")
 text = "Bread"
 
-[node name="plate" type="Node2D" parent="." unique_id=45250385]
+[node name="plate" type="Node2D" parent="ingredients layer" unique_id=45250385]
 position = Vector2(980, 686)
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=989871711]
+[node name="Plate pic" type="TextureRect" parent="ingredients layer" unique_id=989871711]
 offset_left = 895.0
 offset_top = 619.0
 offset_right = 1060.0
@@ -653,6 +650,7 @@ texture = ExtResource("16_e8heu")
 
 [node name="Griller" type="Node2D" parent="." unique_id=2002165796]
 position = Vector2(1192, 661)
+script = ExtResource("19_x5p1p")
 
 [node name="TextureRect2" type="TextureRect" parent="Griller" unique_id=388382325]
 offset_left = -139.0
@@ -662,9 +660,9 @@ offset_bottom = 146.00006
 scale = Vector2(1.2522691, 1.1579947)
 texture = ExtResource("17_boyg6")
 
-[node name="Sprite2D" type="Sprite2D" parent="Griller" unique_id=1292561343]
-position = Vector2(-7.0000114, -23.00003)
-scale = Vector2(0.12783168, 0.17723875)
+[node name="Sprite2D" type="Sprite2D" parent="Griller/TextureRect2" unique_id=1292561343]
+position = Vector2(105.40863, 50.086548)
+scale = Vector2(0.10208005, 0.1530566)
 texture = ExtResource("18_rvswv")
 
 [node name="griller button" type="Button" parent="Griller" unique_id=460291194]
@@ -691,7 +689,7 @@ position = Vector2(499, 561.00006)
 scale = Vector2(4.0733128, 4.2754)
 texture = ExtResource("20_e36ub")
 
-[node name="Button" type="Button" parent="coffee machine" unique_id=1516104853]
+[node name="coffee Button" type="Button" parent="coffee machine" unique_id=1516104853]
 offset_left = 339.0
 offset_top = 494.0
 offset_right = 528.0
@@ -717,3 +715,24 @@ theme_override_styles/background = SubResource("StyleBoxFlat_7irnc")
 theme_override_styles/fill = SubResource("StyleBoxFlat_e36ub")
 value = 50.0
 show_percentage = false
+
+[node name="client" type="Node2D" parent="." unique_id=951247173]
+position = Vector2(1314, 481)
+
+[node name="plateform 1" type="Node2D" parent="client" unique_id=808400845]
+position = Vector2(-130, -10)
+
+[node name="plateform 2" type="Node2D" parent="client" unique_id=953771103]
+position = Vector2(-300, -10)
+
+[node name="plateform 3" type="Node2D" parent="client" unique_id=726636495]
+position = Vector2(-470, -10)
+
+[node name="plateform 4" type="Node2D" parent="client" unique_id=356019058]
+position = Vector2(-640, -10)
+
+[node name="Timer" type="Timer" parent="client" unique_id=64878356]
+wait_time = 10.0
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1804912475]
