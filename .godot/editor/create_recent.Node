@@ -1,11 +1,11 @@
+Sprite2D
+TextureRect
+Node2D
+Button
 AudioStreamPlayer
 AudioStreamPlayer2D
 Timer
-Node2D
 ProgressBar
-Button
-Sprite2D
-TextureRect
 Label
 HBoxContainer
 CanvasLayer

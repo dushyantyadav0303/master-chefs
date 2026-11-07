@@ -1,0 +1,741 @@
+[gd_scene format=3 uid="uid://cb6v5jlxijimi"]
+
+[ext_resource type="Texture2D" uid="uid://do281alyc2d3w" path="res://assest/sprites/wooden-counter-large.png" id="1_80cx4"]
+[ext_resource type="Script" uid="uid://b3ucn2jnb8e3i" path="res://game.gd" id="1_hb5m1"]
+[ext_resource type="Texture2D" uid="uid://ckgb3qloa7n0a" path="res://assest/sprites/stove.png" id="2_e8heu"]
+[ext_resource type="Texture2D" uid="uid://bhlx8xtuagqj1" path="res://assest/sprites/sink.png" id="3_rvswv"]
+[ext_resource type="Texture2D" uid="uid://w4mfeo0pawbb" path="res://assest/Furniter/7trashcan.png" id="5_7jktm"]
+[ext_resource type="Texture2D" uid="uid://bupptber8tcib" path="res://assest/Ingredient/food/3cabbage.png" id="6_eow3j"]
+[ext_resource type="Texture2D" uid="uid://blggjv5dwv4fd" path="res://assest/Ingredient/food/tomato1.png" id="6_ryrav"]
+[ext_resource type="Texture2D" uid="uid://dttpiqrm0y1sx" path="res://assest/Ingredient/food/8bread.png" id="7_eow3j"]
+[ext_resource type="Texture2D" uid="uid://fe06l5dleh6r" path="res://assest/Ingredient/food/cheese1.png" id="7_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://cy7r5xybrd2mh" path="res://assest/Ingredient/food/I_corn_pot.png" id="8_iotsf"]
+[ext_resource type="Texture2D" uid="uid://b1uawj1gynjic" path="res://assest/Ingredient/food/I_corn.png" id="8_vef74"]
+[ext_resource type="Texture2D" uid="uid://cqwdfe0y50v3w" path="res://assest/Ingredient/food/I_dragon_mayo.png" id="9_lc2xo"]
+[ext_resource type="Texture2D" uid="uid://byydjw18gjoml" path="res://assest/Ingredient/food/I_ketchup.png" id="10_215e1"]
+[ext_resource type="Texture2D" uid="uid://b3v804goj1tof" path="res://assest/Ingredient/food/I_strawberry.png" id="11_7sc4i"]
+[ext_resource type="Texture2D" uid="uid://bsonyghxhhfxd" path="res://assest/Ingredient/food/I_strawberry_jam.png" id="11_215e1"]
+[ext_resource type="Texture2D" uid="uid://byobmyw3wa53k" path="res://assest/Ingredient/food/potato1.png" id="13_7sc4i"]
+[ext_resource type="Texture2D" uid="uid://blw22xxp07gwy" path="res://assest/sprites/plate.png" id="16_e8heu"]
+[ext_resource type="Texture2D" uid="uid://cypn2866fm5yb" path="res://assest/sprites/toaster.png" id="17_boyg6"]
+[ext_resource type="Script" uid="uid://sqk0mokldbhg" path="res://plate.gd" id="18_qhcbd"]
+[ext_resource type="Texture2D" uid="uid://s48bn3mgh04g" path="res://Dish/Cheese_Salami_Sandwich.png" id="18_rvswv"]
+[ext_resource type="Texture2D" uid="uid://cky0rkewmnqpr" path="res://assest/sprites/coffee-machine.png" id="19_boyg6"]
+[ext_resource type="Script" uid="uid://xij8u4hegkr3" path="res://griller.gd" id="19_x5p1p"]
+[ext_resource type="Texture2D" uid="uid://dcw4ft76n5e7" path="res://assest/sprites/white-mug.png" id="20_e36ub"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eow3j"]
+bg_color = Color(0.6901961, 0.49411765, 0.8862745, 0.64705884)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jktm"]
+bg_color = Color(0.7058824, 0.49411765, 0.8627451, 0.69411767)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7jktm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ryrav"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_80cx4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j5wjh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vef74"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hve3p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mfdv2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iotsf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lc2xo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_215e1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7sc4i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g13lv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d0vl4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lihx1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3vbuy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1x4wn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kigbm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjobi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8aaw5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mblne"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ibmq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4v2jo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_25iqp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hcbmy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_haehs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fioxy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bo0fb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uerc8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m5ovw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fuikj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l1i01"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r62pu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_klri6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eu6ph"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_edr7y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t46w6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kq12w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m28ev"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lwlx3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0de7l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87ddb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mljfx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qpefm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tci7d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4j2f1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dkuuj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1sttk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tlb40"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uwbuk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f5jn5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_142e3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vdpph"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_id03l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgcjo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjobi"]
+atlas = ExtResource("6_ryrav")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eow3j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e8heu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rvswv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_boyg6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e36ub"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hb5m1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5p1p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qhcbd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f1jbl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vaj68"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i2p71"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xa8c5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5b14r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bnpwn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_36jdj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xfvwf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dhpj7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7knny"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_082n1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iu0sx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xex6t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aa0lp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tb2lt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cfc7e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7irnc"]
+bg_color = Color(0.4425918, 0.32000142, 0.237154, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.05799634, 0.057996362, 0.057996273, 1)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e36ub"]
+bg_color = Color(0.94725865, 0.9613634, 0.96051437, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.42951676, 0.123736344, 0.086470194, 1)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="main" type="Node2D" unique_id=1064493740]
+script = ExtResource("1_hb5m1")
+
+[node name="station" type="TextureRect" parent="." unique_id=1487010145]
+custom_minimum_size = Vector2(1024, 512)
+offset_left = 289.0
+offset_top = 641.0
+offset_right = 2017.0
+offset_bottom = 1153.0
+scale = Vector2(0.6124808, 0.8004267)
+mouse_filter = 2
+texture = ExtResource("1_80cx4")
+expand_mode = 1
+
+[node name="GAS" type="TextureRect" parent="." unique_id=613303904]
+custom_minimum_size = Vector2(1.11, 0)
+offset_left = 27.999996
+offset_top = 594.0
+offset_right = 457.0
+offset_bottom = 1162.0
+scale = Vector2(0.6124808, 0.8004267)
+mouse_filter = 2
+texture = ExtResource("2_e8heu")
+
+[node name="SINK" type="TextureRect" parent="." unique_id=910305288]
+offset_left = 1347.0
+offset_top = 554.99994
+offset_right = 1784.0
+offset_bottom = 1167.4988
+scale = Vector2(0.6124808, 0.8004267)
+mouse_filter = 2
+texture = ExtResource("3_rvswv")
+
+[node name="coffee machine" type="TextureRect" parent="SINK" unique_id=1411835388]
+layout_mode = 0
+offset_left = -1665.3583
+offset_top = -279.85074
+offset_right = -1311.3583
+offset_bottom = 319.14926
+texture = ExtResource("19_boyg6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1556071701]
+layer = -2
+
+[node name="Bg wall" type="TextureRect" parent="CanvasLayer" unique_id=1593061875]
+anchors_preset = -1
+anchor_left = 0.423
+anchor_top = 0.94200003
+anchor_right = 0.423
+anchor_bottom = 0.94200003
+offset_left = -499.29602
+offset_top = -655.416
+offset_right = 1383.704
+offset_bottom = 435.58398
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1036594140]
+anchors_preset = -1
+anchor_left = 0.37109375
+anchor_right = 1.2006993
+anchor_bottom = 0.18995146
+offset_right = -658.70557
+offset_bottom = -100.08855
+grow_horizontal = 2
+scale = Vector2(2.3897495, 3.3466692)
+metadata/_edit_use_anchors_ = true
+
+[node name="sandwich sold" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=893453479]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_eow3j")
+text = "Total sandwich sold: --  "
+
+[node name="balance" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=542008686]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_7jktm")
+text = "balance : --- Rs"
+
+[node name="trash bin" type="TextureRect" parent="." unique_id=1495667593]
+offset_left = 1611.0001
+offset_top = 758.0
+offset_right = 1651.0001
+offset_bottom = 810.0
+scale = Vector2(4.5919228, 5.287087)
+texture = ExtResource("5_7jktm")
+
+[node name="Button" type="Button" parent="." unique_id=323272408]
+offset_left = 1622.0
+offset_top = 982.0
+offset_right = 1786.0
+offset_bottom = 1036.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7jktm")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ryrav")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_80cx4")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_j5wjh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vef74")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_hve3p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_mfdv2")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_iotsf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lc2xo")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_215e1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7sc4i")
+text = "Trash
+"
+
+[node name="ingredients layer" type="Node2D" parent="." unique_id=352588690]
+
+[node name="cabbage" type="TextureRect" parent="ingredients layer" unique_id=721913923]
+offset_left = 532.0
+offset_top = 774.0
+offset_right = 572.0
+offset_bottom = 814.0
+rotation = 0.5081313
+scale = Vector2(1.5473635, 1.4428091)
+texture = ExtResource("6_eow3j")
+
+[node name="cabbage 2" type="TextureRect" parent="ingredients layer/cabbage" unique_id=606693851]
+layout_mode = 0
+offset_left = -20.603588
+offset_top = -15.460587
+offset_right = 14.998581
+offset_bottom = 15.514084
+scale = Vector2(2.1032567, 2.2912254)
+texture = ExtResource("6_eow3j")
+
+[node name="cabbage Button" type="Button" parent="ingredients layer/cabbage" unique_id=528471570]
+layout_mode = 0
+offset_left = -7.9550476
+offset_top = 17.444458
+offset_right = 67.04495
+offset_bottom = 48.444458
+rotation = -0.5191127
+scale = Vector2(0.6685864, 0.8833603)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g13lv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d0vl4")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lihx1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3vbuy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_1x4wn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kigbm")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_sjobi")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8aaw5")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_mblne")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8ibmq")
+text = "Cabbage"
+
+[node name="chesse" type="TextureRect" parent="ingredients layer" unique_id=487534405]
+offset_left = 604.53326
+offset_top = 776.00006
+offset_right = 636.53326
+offset_bottom = 808.00006
+scale = Vector2(3.278317, 2.7580779)
+texture = ExtResource("7_j5wjh")
+
+[node name="chesse button" type="Button" parent="ingredients layer/chesse" unique_id=1763868774]
+layout_mode = 0
+offset_left = 6.4057255
+offset_top = 9.426832
+offset_right = 60.405724
+offset_bottom = 32.426834
+scale = Vector2(0.3517907, 0.63030535)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4v2jo")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_25iqp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hcbmy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_haehs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fioxy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_bo0fb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_uerc8")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_m5ovw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fuikj")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_l1i01")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r62pu")
+text = "cheese"
+
+[node name="corn" type="TextureRect" parent="ingredients layer" unique_id=1902272870]
+offset_left = 713.0
+offset_top = 749.0
+offset_right = 757.6347
+offset_bottom = 787.1648
+scale = Vector2(2.5988762, 2.8036304)
+texture = ExtResource("8_vef74")
+
+[node name="corn pics" type="TextureRect" parent="ingredients layer/corn" unique_id=482234369]
+layout_mode = 0
+offset_left = 3.4630358
+offset_top = 0.35667896
+offset_right = 43.463036
+offset_bottom = 40.356678
+texture = ExtResource("8_iotsf")
+
+[node name="corn Button" type="Button" parent="ingredients layer/corn" unique_id=575179152]
+layout_mode = 0
+offset_left = 6.9260707
+offset_top = 3.2101288
+offset_right = 53.989456
+offset_bottom = 59.019882
+scale = Vector2(0.84210885, 0.6469476)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_klri6")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_eu6ph")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_edr7y")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t46w6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kq12w")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_m28ev")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lwlx3")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_0de7l")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_87ddb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_mljfx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qpefm")
+text = "corn"
+
+[node name="mayo" type="TextureRect" parent="ingredients layer" unique_id=408519868]
+offset_left = 992.53326
+offset_top = 691.0
+offset_right = 1032.5332
+offset_bottom = 731.0
+scale = Vector2(4.380934, 4.727255)
+texture = ExtResource("9_lc2xo")
+
+[node name="mayo Button" type="Button" parent="ingredients layer/mayo" unique_id=864802158]
+layout_mode = 0
+offset_left = 13.695711
+offset_top = 14.807748
+offset_right = 56.69571
+offset_bottom = 88.37037
+scale = Vector2(0.3052916, 0.24155337)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_klri6")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_eu6ph")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_edr7y")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t46w6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kq12w")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_m28ev")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lwlx3")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_0de7l")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_87ddb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_mljfx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qpefm")
+text = "mayo"
+
+[node name="ketchup" type="TextureRect" parent="ingredients layer" unique_id=453921955]
+offset_left = 1065.5333
+offset_top = 687.0
+offset_right = 1105.5333
+offset_bottom = 727.0
+scale = Vector2(5.642853, 5.0008235)
+texture = ExtResource("10_215e1")
+
+[node name="ketchup Button" type="Button" parent="ingredients layer/ketchup" unique_id=325408698]
+layout_mode = 0
+offset_left = 13.645588
+offset_top = 15.997372
+offset_right = 76.645584
+offset_bottom = 71.42041
+scale = Vector2(0.19830921, 0.27173972)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_klri6")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_eu6ph")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_edr7y")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t46w6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kq12w")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_m28ev")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lwlx3")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_0de7l")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_87ddb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_mljfx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qpefm")
+text = "ketchup"
+
+[node name="strawberry jar" type="TextureRect" parent="ingredients layer" unique_id=1637478118]
+offset_left = 773.53326
+offset_top = 750.8498
+offset_right = 907.53326
+offset_bottom = 889.8498
+rotation = -0.43077627
+scale = Vector2(1.0696023, 1.2180266)
+texture = ExtResource("11_215e1")
+
+[node name="strawberry" type="TextureRect" parent="ingredients layer/strawberry jar" unique_id=1033170927]
+layout_mode = 0
+offset_left = 39.25256
+offset_top = 42.96148
+offset_right = 79.25256
+offset_bottom = 82.96148
+texture = ExtResource("11_7sc4i")
+
+[node name="strawberry2" type="TextureRect" parent="ingredients layer/strawberry jar" unique_id=485431951]
+layout_mode = 0
+offset_left = 49.25256
+offset_top = 59.96148
+offset_right = 89.25256
+offset_bottom = 99.96148
+texture = ExtResource("11_7sc4i")
+
+[node name="jam Button" type="Button" parent="ingredients layer/strawberry jar" unique_id=561986815]
+layout_mode = 0
+offset_left = 47.7421
+offset_top = 36.569912
+offset_right = 90.742096
+offset_bottom = 90.43317
+rotation = 0.3841716
+scale = Vector2(1.3862137, 0.95766956)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_klri6")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_eu6ph")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_edr7y")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t46w6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kq12w")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_m28ev")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lwlx3")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_0de7l")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_87ddb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_mljfx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qpefm")
+text = "jam"
+
+[node name="potato" type="TextureRect" parent="ingredients layer" unique_id=448793239]
+offset_left = 914.53326
+offset_top = 764.0
+offset_right = 1014.53326
+offset_bottom = 852.0
+texture = ExtResource("13_7sc4i")
+
+[node name="potato Button" type="Button" parent="ingredients layer/potato" unique_id=54497605]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 34.0
+offset_right = 74.0
+offset_bottom = 57.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tci7d")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4j2f1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dkuuj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_1sttk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tlb40")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_uwbuk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_f5jn5")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_142e3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vdpph")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_id03l")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lgcjo")
+text = "potato"
+
+[node name="Tomato" type="TextureRect" parent="ingredients layer" unique_id=1047858127]
+offset_left = 397.0
+offset_top = 787.0
+offset_right = 503.0
+offset_bottom = 901.0
+rotation = -0.18053761
+scale = Vector2(0.64, 0.6)
+texture = SubResource("AtlasTexture_sjobi")
+
+[node name="Tomato" type="TextureRect" parent="ingredients layer/Tomato" unique_id=1941617783]
+layout_mode = 0
+offset_left = 55.323547
+offset_top = 29.407349
+offset_right = 161.32355
+offset_bottom = 143.40735
+rotation = -0.18053761
+scale = Vector2(0.64, 0.6)
+texture = SubResource("AtlasTexture_sjobi")
+
+[node name="tomto Button" type="Button" parent="ingredients layer/Tomato" unique_id=1225924816]
+layout_mode = 0
+offset_left = -24.313416
+offset_top = -6.4278564
+offset_right = 132.9942
+offset_bottom = 78.57263
+rotation = 0.15908381
+scale = Vector2(1.0660111, 1.2602876)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eow3j")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_e8heu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rvswv")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_boyg6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e36ub")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_hb5m1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_x5p1p")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_qhcbd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_f1jbl")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_vaj68")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i2p71")
+text = "tomato"
+
+[node name="bread" type="TextureRect" parent="ingredients layer" unique_id=750333128]
+offset_left = 309.53326
+offset_top = 756.0
+offset_right = 366.87885
+offset_bottom = 795.9612
+rotation = 0.26942185
+scale = Vector2(1.7700318, 2.0244443)
+texture = ExtResource("7_eow3j")
+
+[node name="bread Button" type="Button" parent="ingredients layer/bread" unique_id=940909559]
+layout_mode = 0
+offset_left = 9.262184
+offset_top = 12.62482
+offset_right = 55.262184
+offset_bottom = 35.62482
+rotation = -0.25333259
+scale = Vector2(0.7075495, 0.83421415)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xa8c5")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5b14r")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bnpwn")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_36jdj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xfvwf")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_dhpj7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_7knny")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_082n1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_iu0sx")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_xex6t")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aa0lp")
+text = "Bread"
+
+[node name="plate" type="Node2D" parent="ingredients layer" unique_id=45250385]
+position = Vector2(980, 686)
+script = ExtResource("18_qhcbd")
+spacing = null
+
+[node name="Plate pic" type="TextureRect" parent="ingredients layer" unique_id=989871711]
+offset_left = 895.0
+offset_top = 619.0
+offset_right = 1060.0
+offset_bottom = 759.0
+texture = ExtResource("16_e8heu")
+
+[node name="Griller" type="Node2D" parent="." unique_id=2002165796]
+position = Vector2(1192, 661)
+script = ExtResource("19_x5p1p")
+
+[node name="TextureRect2" type="TextureRect" parent="Griller" unique_id=388382325]
+offset_left = -139.0
+offset_top = -80.99994
+offset_right = 105.0
+offset_bottom = 146.00006
+scale = Vector2(1.2522691, 1.1579947)
+texture = ExtResource("17_boyg6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Griller/TextureRect2" unique_id=1292561343]
+position = Vector2(105.40863, 50.086548)
+scale = Vector2(0.10208005, 0.1530566)
+texture = ExtResource("18_rvswv")
+
+[node name="griller button" type="Button" parent="Griller" unique_id=460291194]
+offset_left = -79.0
+offset_top = -70.0
+offset_right = 98.0
+offset_bottom = 34.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tb2lt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tb2lt")
+
+[node name="coffee machine" type="Node2D" parent="." unique_id=1666037600]
+
+[node name="Sprite2D" type="Sprite2D" parent="coffee machine" unique_id=391223593]
+position = Vector2(499, 561.00006)
+scale = Vector2(4.0733128, 4.2754)
+texture = ExtResource("20_e36ub")
+
+[node name="coffee Button" type="Button" parent="coffee machine" unique_id=1516104853]
+offset_left = 339.0
+offset_top = 494.0
+offset_right = 528.0
+offset_bottom = 674.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_cfc7e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cfc7e")
+
+[node name="ProgressBar" type="ProgressBar" parent="coffee machine" unique_id=1088197282]
+offset_left = 352.0
+offset_top = 441.0
+offset_right = 517.0
+offset_bottom = 478.0
+theme_override_styles/background = SubResource("StyleBoxFlat_7irnc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_e36ub")
+value = 50.0
+show_percentage = false
+
+[node name="client" type="Node2D" parent="." unique_id=951247173]
+position = Vector2(1314, 481)
+
+[node name="plateform 1" type="Node2D" parent="client" unique_id=808400845]
+position = Vector2(-130, -10)
+
+[node name="plateform 2" type="Node2D" parent="client" unique_id=953771103]
+position = Vector2(-300, -10)
+
+[node name="plateform 3" type="Node2D" parent="client" unique_id=726636495]
+position = Vector2(-470, -10)
+
+[node name="plateform 4" type="Node2D" parent="client" unique_id=356019058]
+position = Vector2(-640, -10)
+
+[node name="Timer" type="Timer" parent="client" unique_id=64878356]
+wait_time = 10.0
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1804912475]
