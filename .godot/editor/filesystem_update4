@@ -1,8 +1,3 @@
 res://game.tscn
-res://plate.gd
-res://game.gd
+res://script/coffee_machine.gd
 res://script/main.gd
-res://script/griller.gd
-res://script/plate.gd
-res://boiler.gd
-res://script/boiler.gd

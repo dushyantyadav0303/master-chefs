@@ -19,11 +19,11 @@
 [ext_resource type="Texture2D" uid="uid://blw22xxp07gwy" path="res://assest/sprites/plate.png" id="16_e8heu"]
 [ext_resource type="Texture2D" uid="uid://cypn2866fm5yb" path="res://assest/sprites/toaster.png" id="17_boyg6"]
 [ext_resource type="Texture2D" uid="uid://cky0rkewmnqpr" path="res://assest/sprites/coffee-machine.png" id="19_boyg6"]
-[ext_resource type="Script" path="res://griller.gd" id="19_x5p1p"]
 [ext_resource type="Texture2D" uid="uid://dcw4ft76n5e7" path="res://assest/sprites/white-mug.png" id="20_e36ub"]
 [ext_resource type="Script" uid="uid://b5np0gvvx1awg" path="res://script/boiler.gd" id="22_qhcbd"]
 [ext_resource type="Script" uid="uid://cgvtpv0b884d1" path="res://script/plate.gd" id="23_qhcbd"]
 [ext_resource type="Texture2D" uid="uid://mwpk0yalhvjf" path="res://assest/sprites/plant2.png" id="24_f1jbl"]
+[ext_resource type="Script" uid="uid://uuil33l2nll0" path="res://script/coffee_machine.gd" id="24_vaj68"]
 [ext_resource type="Texture2D" uid="uid://cxfpo0b1i133a" path="res://assest/sprites/window.png" id="25_vaj68"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eow3j"]
@@ -728,7 +728,6 @@ text = "plate"
 
 [node name="griller" type="Node2D" parent="." unique_id=2002165796]
 position = Vector2(1192, 661)
-script = ExtResource("19_x5p1p")
 
 [node name="TextureRect2" type="TextureRect" parent="griller" unique_id=388382325]
 offset_left = -188.0
@@ -784,15 +783,16 @@ text = "Boiler"
 
 [node name="Sprite2D" type="Sprite2D" parent="boiler" unique_id=1966591964]
 
-[node name="coffee machine" type="Node2D" parent="boiler" unique_id=1666037600]
+[node name="coffee machine" type="Node2D" parent="." unique_id=1666037600]
 position = Vector2(0, -2)
+script = ExtResource("24_vaj68")
 
-[node name="Sprite2D" type="Sprite2D" parent="boiler/coffee machine" unique_id=391223593]
+[node name="Sprite2D" type="Sprite2D" parent="coffee machine" unique_id=391223593]
 position = Vector2(497, 578.00006)
 scale = Vector2(4.6333127, 4.5154)
 texture = ExtResource("20_e36ub")
 
-[node name="coffee Button" type="Button" parent="boiler/coffee machine" unique_id=1516104853]
+[node name="coffee Button" type="Button" parent="coffee machine" unique_id=1516104853]
 offset_left = 339.0
 offset_top = 494.0
 offset_right = 528.0
@@ -809,7 +809,7 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_cfc7e")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_cfc7e")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_cfc7e")
 
-[node name="ProgressBar" type="ProgressBar" parent="boiler/coffee machine" unique_id=1088197282]
+[node name="ProgressBar" type="ProgressBar" parent="coffee machine" unique_id=1088197282]
 offset_left = 350.0
 offset_top = 470.0
 offset_right = 515.0
@@ -817,7 +817,6 @@ offset_bottom = 507.0
 scale = Vector2(1, 0.68000185)
 theme_override_styles/background = SubResource("StyleBoxFlat_7irnc")
 theme_override_styles/fill = SubResource("StyleBoxFlat_e36ub")
-value = 50.0
 show_percentage = false
 
 [node name="client" type="Node2D" parent="." unique_id=951247173]
@@ -843,3 +842,4 @@ autostart = true
 
 [connection signal="pressed" from="trash Button" to="." method="_on_trash_button_pressed"]
 [connection signal="pressed" from="plate/plate Button" to="." method="_on_plate_button_pressed"]
+[connection signal="pressed" from="coffee machine/coffee Button" to="." method="_on_coffee_button_pressed"]
