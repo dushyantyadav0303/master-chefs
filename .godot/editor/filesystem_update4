@@ -1,3 +1,7 @@
 res://game.tscn
 res://script/coffee_machine.gd
 res://script/main.gd
+res://script/client.gd
+res://scene/client.tscn
+res://script/client2D.gd
+res://scene/client_bar.tres

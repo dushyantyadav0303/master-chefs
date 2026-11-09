@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://mwpk0yalhvjf" path="res://assest/sprites/plant2.png" id="24_f1jbl"]
 [ext_resource type="Script" uid="uid://uuil33l2nll0" path="res://script/coffee_machine.gd" id="24_vaj68"]
 [ext_resource type="Texture2D" uid="uid://cxfpo0b1i133a" path="res://assest/sprites/window.png" id="25_vaj68"]
+[ext_resource type="Script" uid="uid://dw0a8gxu23pkr" path="res://script/client.gd" id="26_i2p71"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eow3j"]
 bg_color = Color(0.6901961, 0.49411765, 0.8862745, 0.64705884)
@@ -821,25 +822,33 @@ show_percentage = false
 
 [node name="client" type="Node2D" parent="." unique_id=951247173]
 position = Vector2(1314, 481)
+script = ExtResource("26_i2p71")
 
-[node name="plateform 1" type="Node2D" parent="client" unique_id=808400845]
-position = Vector2(-130, -10)
-
-[node name="plateform 2" type="Node2D" parent="client" unique_id=953771103]
-position = Vector2(-300, -10)
-
-[node name="plateform 3" type="Node2D" parent="client" unique_id=726636495]
-position = Vector2(-470, -10)
-
-[node name="plateform 4" type="Node2D" parent="client" unique_id=356019058]
-position = Vector2(-640, -10)
-
-[node name="Timer" type="Timer" parent="client" unique_id=64878356]
+[node name="spawn Timer" type="Timer" parent="client" unique_id=64878356]
 wait_time = 10.0
 autostart = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1804912475]
+[node name="position 1" type="Node2D" parent="client" unique_id=808400845]
+position = Vector2(-130, -10)
+
+[node name="position 2" type="Node2D" parent="client" unique_id=953771103]
+position = Vector2(-300, -10)
+
+[node name="position 3" type="Node2D" parent="client" unique_id=726636495]
+position = Vector2(-470, -10)
+
+[node name="position 4" type="Node2D" parent="client" unique_id=356019058]
+position = Vector2(-640, -10)
+
+[node name="MoneyAppendedSound" type="AudioStreamPlayer" parent="." unique_id=1804912475]
+
+[node name="MoneyRemovedSound" type="AudioStreamPlayer" parent="." unique_id=568263416]
+
+[node name="TrashSound" type="AudioStreamPlayer" parent="." unique_id=1631461933]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=320062254]
 
 [connection signal="pressed" from="trash Button" to="." method="_on_trash_button_pressed"]
 [connection signal="pressed" from="plate/plate Button" to="." method="_on_plate_button_pressed"]
 [connection signal="pressed" from="coffee machine/coffee Button" to="." method="_on_coffee_button_pressed"]
+[connection signal="timeout" from="client/spawn Timer" to="." method="_on_spawn_timer_timeout"]
