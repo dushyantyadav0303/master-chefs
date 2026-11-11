@@ -1,3 +1,5 @@
+Sprite2D
+TextureRect
 AudioStreamPlayer
 AudioStreamPlayer2D
 ProgressBar
@@ -6,8 +8,6 @@ VBoxContainer
 TextureButton
 Node2D
 Timer
-Sprite2D
-TextureRect
 Button
 HBoxContainer
 CanvasLayer

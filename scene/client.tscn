@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://wxdrslq0uhxg"]
 
-[ext_resource type="Script" uid="uid://dwjipnel0pty6" path="res://script/client2D.gd" id="1_8ec48"]
-[ext_resource type="Texture2D" uid="uid://dfuq024ewp28p" path="res://assest/sprites by judas la carotte/sprite4 happy.png" id="1_v0ucu"]
-[ext_resource type="StyleBox" uid="uid://cpkor81iqn15f" path="res://scene/clientbar.tres" id="3_jh77h"]
-[ext_resource type="StyleBox" uid="uid://cmocu7e3ihwpu" path="res://scene/clientbar_angry.tres" id="4_dvefi"]
+[ext_resource type="Script" uid="uid://dwjipnel0pty6" path="res://script/client2D.gd" id="1_2c50s"]
+[ext_resource type="Texture2D" uid="uid://dfuq024ewp28p" path="res://assest/sprites by judas la carotte/sprite4 happy.png" id="2_q6gsj"]
+[ext_resource type="StyleBox" uid="uid://cpkor81iqn15f" path="res://scene/clientbar.tres" id="3_dwj24"]
+[ext_resource type="StyleBox" uid="uid://cmocu7e3ihwpu" path="res://scene/clientbar_angry.tres" id="4_grkrn"]
+[ext_resource type="AudioStream" uid="uid://dtdujuxeq2ji3" path="res://sound/universfield-bell-ring-123742.mp3" id="5_jgjsk"]
+[ext_resource type="AudioStream" uid="uid://crjvvsrfioray" path="res://sound/huh....mp3" id="6_16yn3"]
+[ext_resource type="AudioStream" uid="uid://drcwkwcentgia" path="res://sound/confused-sound.mp3" id="7_h7r7o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0ucu"]
 bg_color = Color(0.9734164, 0.92823845, 0.8069209, 1)
@@ -29,16 +32,16 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 corner_detail = 20
 
-[node name="client" type="Node2D" unique_id=344138014]
-scale = Vector2(0.603878, 0.7200011)
-script = ExtResource("1_8ec48")
+[node name="Client" type="Node2D" unique_id=344138014]
+scale = Vector2(6.9038696, 5.793648)
+script = ExtResource("1_2c50s")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1302863747]
 offset_left = -13.247708
 offset_top = -26.38885
 offset_right = 14.752292
 offset_bottom = 24.61115
-texture_normal = ExtResource("1_v0ucu")
+texture_normal = ExtResource("2_q6gsj")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -60,19 +63,25 @@ horizontal_alignment = 1
 [node name="ProgressBar" type="ProgressBar" parent="VBoxContainer" unique_id=903161795]
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_8ec48")
-theme_override_styles/fill = ExtResource("3_jh77h")
+theme_override_styles/fill = ExtResource("3_dwj24")
 show_percentage = false
 
 [node name="Angry_progress_bar" type="ProgressBar" parent="VBoxContainer" unique_id=1008707374]
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_8ec48")
-theme_override_styles/fill = ExtResource("4_dvefi")
+theme_override_styles/fill = ExtResource("4_grkrn")
 show_percentage = false
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1458272379]
+[node name="OrderSound" type="AudioStreamPlayer2D" parent="." unique_id=1458272379]
+stream = ExtResource("5_jgjsk")
+volume_db = 24.0
 
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1948654820]
+[node name="AngrySound" type="AudioStreamPlayer2D" parent="." unique_id=1948654820]
+stream = ExtResource("6_16yn3")
+volume_db = 24.0
 
-[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="." unique_id=485211659]
+[node name="confusedsound" type="AudioStreamPlayer2D" parent="." unique_id=485211659]
+stream = ExtResource("7_h7r7o")
+volume_db = 24.0
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

@@ -7,8 +7,7 @@ var fill_time := 6.0
 var drink_cup_texture = preload("res://assest/sprites/white-mug.png")
 
 func _ready() -> void:
-	 coffee Button.pressed.connect(func(): on_coffee_button_pressed())
-
+	$"coffee Button".pressed.connect(on_coffee_button_pressed)
 func on_coffee_button_pressed():
 	if filled:
 		if get_parent().item_held == 'none':
