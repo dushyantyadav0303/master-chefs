@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var spacing: int = -5
+@export var spacing: int = -7
 var stack := []
 var bottom_bread_added := false
 var potato_added := false
@@ -22,19 +22,19 @@ func add_ingredient(type: String):
 			type = 'top_bread'
 			top_bread_added = true 
 	get_sandwich_name(type)
-	#var path = "res://sprites/ingredients/" + type + ".png"
-	var path = "res://assest/Menu/foods/1pancake.png"
+	var path = "res://sprites/ingredients/" + type + ".png"
+	print(type)
 	var texture = load(path)
 	
 	
 	var sprite = Sprite2D.new()
 	sprite.name = type + str(stack.size())
 	sprite.texture = texture
-	sprite.scale = Vector2(2.8, 2.8)
+	sprite.scale = Vector2(0.05, 0.05)
 	sprite.position = Vector2(0, spacing * stack.size())
-	$Burger.add_child(sprite)
+	$sandwich.add_child(sprite)
 	stack.append(sprite)
-	
+
 	
 	
 func get_sandwich_name(type):
@@ -42,18 +42,19 @@ func get_sandwich_name(type):
 		potato_counter += 1
 	if type == 'cheese':
 		has_cheese = true
-	
-	if potato_counter == 0:
-		plate_name = 'invalid_sandwich'
-	elif potato_counter == 1:
+	var recipe = 'invalid_sandwich'
+	if potato_counter == 1:
 		if has_cheese:
-			plate_name = 'cheese_sandwich'
+			recipe = 'cheese_sandwich'
 		else:
-			plate_name = 'sandwich'
+			recipe = 'sandwich'
 	elif potato_counter == 2:
 		if has_cheese:
-			plate_name = 'double_cheese_sandwich'
+			recipe = 'double_cheese_sandwich'
 		else:
-			plate_name = 'double_pattie_sandwich'
-	elif potato_counter > 2:
+			recipe = 'double_pattie_sandwich'
+
+	if top_bread_added:
+		plate_name = recipe
+	else:
 		plate_name = 'invalid_sandwich'

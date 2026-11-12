@@ -1,1 +1,6 @@
 res://scene/Client.tscn
+res://game.tscn
+res://script/main.gd
+res://script/plate.gd
+res://script/griller.gd
+res://script/client_spawner.gd

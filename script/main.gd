@@ -8,7 +8,7 @@ var balance = 0
 var total_sandwiches_sold = 0
 
 func _ready():
-
+	reset_plate()
 	$"CanvasLayer/HBoxContainer/sandwich sold".text = 'Total sandwiches sold: ' + str(total_sandwiches_sold) + "    "
 	$"CanvasLayer/HBoxContainer/balance".text = 'Balance' + str(balance) + "Rs "
 	
@@ -23,7 +23,8 @@ func _ready():
 	$"ingredients layer/plate/Plate pic".hide()
 func on_ingredient_pressed(ingredient_name: String):
 	if ingredient_name == 'potato':
-		print("aluuu")
+		if not griller.is_busy:
+			griller.start_cooking()
 		return
 	#$"ingredients layer/AudioStreamPlayer".play()
 	plate.add_ingredient(ingredient_name)
@@ -55,6 +56,7 @@ func _on_plate_button_pressed() -> void:
 		item_held =$"ingredients layer/plate".plate_name
 		$"ingredients layer/plate/Plate pic".show()
 		print("plate dedo")
+		
 
 func append_balance(type):
 	if type == 'coffee':
@@ -87,10 +89,9 @@ func remove_balance(type):
 
 
 func _on_trash_button_pressed() -> void:
-	#$trashsound.play()
-	if not item_held == 'coffee' and not item_held =='none':
-		reset_plate()
-	item_held ='none'
+	reset_plate()
+	griller.reset()
+	item_held = 'none'
 
 var _loaded = false
 var _save_path = "user://savegame.dat"
@@ -125,5 +126,9 @@ func save_settings():
 	file.close()
 
 
-func _on_cabbage_button_pressed() -> void:
-	pass # Replace with function body.
+
+func _on_button_pressed() -> void:
+	item_held = plate.plate_name
+	print("Picked up: ", item_held)
+	
+	

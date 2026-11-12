@@ -28,7 +28,6 @@
 [ext_resource type="Texture2D" uid="uid://bc71qu7afka4b" path="res://assest/sprites/pan.png" id="25_bnpwn"]
 [ext_resource type="Texture2D" uid="uid://cxfpo0b1i133a" path="res://assest/sprites/window.png" id="25_vaj68"]
 [ext_resource type="Texture2D" uid="uid://bro7v6o4cwyw8" path="res://assest/Ingredient/food/019_bergamot.png" id="25_xfvwf"]
-[ext_resource type="Texture2D" uid="uid://ckpx75dutbpkj" path="res://assest/Ingredient/food/12curry.png" id="26_36jdj"]
 [ext_resource type="Texture2D" uid="uid://ced3duo54oaig" path="res://Dish/Boiled_Egg.png" id="26_dhpj7"]
 [ext_resource type="Texture2D" uid="uid://cpneoc1jqkljq" path="res://assest/Furniter/5lamp.png" id="27_xa8c5"]
 [ext_resource type="Texture2D" uid="uid://dpjxif6e51d61" path="res://assest/Ingredient/food/I_cheese.png" id="28_7knny"]
@@ -37,6 +36,8 @@
 [ext_resource type="Texture2D" uid="uid://5udashrkrbfl" path="res://assest/sprites/white-mug1.png" id="34_aa0lp"]
 [ext_resource type="AudioStream" uid="uid://cx2terefsdili" path="res://sound/coffee-sound.mp3" id="35_aa0lp"]
 [ext_resource type="Script" uid="uid://422kmm8vje13" path="res://script/client_spawner.gd" id="35_xex6t"]
+[ext_resource type="AudioStream" uid="uid://mo0cbkr1yx78" path="res://sound/cooking.mp3" id="38_4v2jo"]
+[ext_resource type="AudioStream" uid="uid://bp42h0rnyutyi" path="res://sound/burning.mp3" id="39_l1i01"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eow3j"]
 bg_color = Color(0.6901961, 0.49411765, 0.8862745, 0.64705884)
@@ -215,6 +216,28 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l1i01"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r62pu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gh0px"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mc3al"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tki7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bqa6y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4v2jo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1i01"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_klri6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eu6ph"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ple6s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jo4nb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_56gn1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5fw58"]
 
@@ -450,10 +473,10 @@ texture = ExtResource("7_eow3j")
 
 [node name="bread Button" type="Button" parent="ingredients layer/bread" unique_id=940909559]
 layout_mode = 0
-offset_left = 9.262184
-offset_top = 12.62482
-offset_right = 55.262184
-offset_bottom = 35.62482
+offset_left = 4.8466196
+offset_top = 9.194502
+offset_right = 56.55075
+offset_bottom = 48.020798
 rotation = -0.25333259
 scale = Vector2(0.7075495, 0.83421415)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xa8c5")
@@ -480,10 +503,10 @@ texture = ExtResource("8_vaj68")
 
 [node name="cabbage Button" type="Button" parent="ingredients layer/cabbage" unique_id=528471570]
 layout_mode = 0
-offset_left = 14.330199
-offset_top = 25.350723
-offset_right = 89.3302
-offset_bottom = 56.35073
+offset_left = 12.949649
+offset_top = 20.233917
+offset_right = 93.02069
+offset_bottom = 69.8342
 rotation = -0.011675544
 scale = Vector2(0.26044253, 0.31211936)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_g13lv")
@@ -519,10 +542,10 @@ texture = SubResource("AtlasTexture_sjobi")
 
 [node name="tomto Button" type="Button" parent="ingredients layer/Tomato" unique_id=1225924816]
 layout_mode = 0
-offset_left = -24.313416
-offset_top = -6.4278564
-offset_right = 132.9942
-offset_bottom = 78.57263
+offset_left = 8.802073
+offset_top = 5.901632
+offset_right = 143.37129
+offset_bottom = 83.04842
 rotation = 0.15908381
 scale = Vector2(1.0660111, 1.2602876)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_eow3j")
@@ -548,10 +571,10 @@ texture = ExtResource("13_7sc4i")
 
 [node name="potato Button" type="Button" parent="ingredients layer/potato" unique_id=54497605]
 layout_mode = 0
-offset_left = 22.0
-offset_top = 34.0
-offset_right = 74.0
-offset_bottom = 57.0
+offset_left = 6.5187426
+offset_top = 6.0
+offset_right = 100.11317
+offset_bottom = 80.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_tci7d")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4j2f1")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_dkuuj")
@@ -575,10 +598,10 @@ texture = ExtResource("8_vef74")
 
 [node name="corn Button" type="Button" parent="ingredients layer/corn" unique_id=575179152]
 layout_mode = 0
-offset_left = 6.9260707
-offset_top = 3.2101288
-offset_right = 53.989456
-offset_bottom = 59.019882
+offset_left = 1.7647104
+offset_top = 3.027916e-05
+offset_right = 54.957184
+offset_bottom = 60.771698
 scale = Vector2(0.84210885, 0.6469476)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_klri6")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_eu6ph")
@@ -603,10 +626,10 @@ texture = ExtResource("7_j5wjh")
 
 [node name="chesse button" type="Button" parent="ingredients layer/chesse" unique_id=1763868774]
 layout_mode = 0
-offset_left = 6.4057255
-offset_top = 9.426832
-offset_right = 60.405724
-offset_bottom = 32.426834
+offset_left = 3.6006112
+offset_top = 7.2514057
+offset_right = 78.5964
+offset_bottom = 38.313877
 scale = Vector2(0.3517907, 0.63030535)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4v2jo")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_25iqp")
@@ -642,6 +665,25 @@ position = Vector2(870.69904, 725.00006)
 scale = Vector2(1.9752083, 1.1718256)
 script = ExtResource("23_qhcbd")
 
+[node name="Button" type="Button" parent="ingredients layer/plate" unique_id=34641206]
+z_index = 8
+offset_left = -99.97307
+offset_top = -129.71219
+offset_right = -27.168427
+offset_bottom = -90.03883
+scale = Vector2(2.7819111, 3.613661)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gh0px")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_mc3al")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2tki7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_bqa6y")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4v2jo")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_l1i01")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_klri6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_eu6ph")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ple6s")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_jo4nb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_56gn1")
+
 [node name="plate-stack" type="TextureRect" parent="ingredients layer/plate" unique_id=397475288]
 offset_left = 107.22491
 offset_top = -119.47175
@@ -660,9 +702,9 @@ texture = ExtResource("16_e8heu")
 
 [node name="plate Button" type="Button" parent="ingredients layer/plate" unique_id=241025622]
 offset_left = 119.656784
-offset_top = -81.92351
+offset_top = -69.97634
 offset_right = 167.65677
-offset_bottom = -50.923508
+offset_bottom = -4.161949
 scale = Vector2(1.7026327, 1.3355286)
 theme_override_colors/font_color = Color(0.9428692, 0.27933386, 0.3056225, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5fw58")
@@ -680,36 +722,42 @@ text = "plate"
 [node name="sandwich" type="Node2D" parent="ingredients layer/plate" unique_id=812525268]
 
 [node name="bottom bread" type="Sprite2D" parent="ingredients layer/plate/sandwich" unique_id=228546204]
+visible = false
 position = Vector2(-1.8703957, -1.0000241)
 scale = Vector2(6.47994, 6.9999933)
 texture = SubResource("AtlasTexture_bnpwn")
 
 [node name="cabbage leaf" type="Sprite2D" parent="ingredients layer/plate/sandwich" unique_id=328428404]
+visible = false
 position = Vector2(0.17580986, -11.5937605)
 scale = Vector2(4.2874823, 6.8125386)
 texture = SubResource("AtlasTexture_xfvwf")
 
 [node name="tomato slice" type="Sprite2D" parent="ingredients layer/plate/sandwich" unique_id=788109561]
+visible = false
 position = Vector2(-0.8473301, -18)
 scale = Vector2(0.2853555, 0.375)
 texture = SubResource("AtlasTexture_7knny")
 
 [node name="potato pattie" type="Sprite2D" parent="ingredients layer/plate/sandwich" unique_id=1446257598]
+visible = false
 position = Vector2(-0.8473567, -27.5)
 scale = Vector2(5.269214, 1.15)
-texture = ExtResource("26_36jdj")
 
 [node name="cheese slice" type="Sprite2D" parent="ingredients layer/plate/sandwich" unique_id=1734312740]
+visible = false
 position = Vector2(-3.9167633, -31.000006)
 scale = Vector2(3.8497503, 0.32812536)
 texture = ExtResource("28_7knny")
 
 [node name="corn" type="Sprite2D" parent="ingredients layer/plate/sandwich" unique_id=645104666]
+visible = false
 position = Vector2(1.1990175, -36.000008)
 scale = Vector2(5.188824, 6.3833513)
 texture = SubResource("AtlasTexture_aa0lp")
 
 [node name="top bread" type="Sprite2D" parent="ingredients layer/plate/sandwich" unique_id=826919435]
+visible = false
 position = Vector2(0.17582846, -46.99999)
 scale = Vector2(6.452824, 7.076564)
 texture = SubResource("AtlasTexture_iu0sx")
@@ -771,12 +819,10 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_tb2lt")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tb2lt")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tb2lt")
 
-[node name="Sprite2D" type="Sprite2D" parent="griller/griller button" unique_id=1292561343]
-position = Vector2(83.878235, 14.33931)
-rotation = -3.141514
-scale = Vector2(3.0352156, -2.7965462)
-skew = -0.007399678
-texture = ExtResource("26_36jdj")
+[node name="pattie" type="Sprite2D" parent="griller" unique_id=1160242089]
+unique_name_in_owner = true
+position = Vector2(-1036.4816, -19)
+scale = Vector2(0.0552175, 0.06794583)
 
 [node name="coffee machine" type="Node2D" parent="." unique_id=1666037600]
 position = Vector2(0, -2)
@@ -844,10 +890,16 @@ position = Vector2(-655, 45)
 
 [node name="TrashSound" type="AudioStreamPlayer" parent="." unique_id=1631461933]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=320062254]
+[node name="cooking" type="AudioStreamPlayer" parent="." unique_id=320062254]
+stream = ExtResource("38_4v2jo")
+
+[node name="burned" type="AudioStreamPlayer" parent="." unique_id=1504002466]
+stream = ExtResource("39_l1i01")
 
 [connection signal="pressed" from="trash Button" to="." method="_on_trash_button_pressed"]
 [connection signal="pressed" from="ingredients layer/cabbage/cabbage Button" to="." method="_on_cabbage_button_pressed"]
+[connection signal="pressed" from="ingredients layer/plate/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ingredients layer/plate/plate Button" to="." method="_on_plate_button_pressed"]
+[connection signal="pressed" from="griller/griller button" to="griller" method="_on_griller_button_pressed"]
 [connection signal="pressed" from="coffee machine/coffee Button" to="." method="_on_coffee_button_pressed"]
 [connection signal="timeout" from="client-spawner/spawn Timer" to="client-spawner" method="_on_spawn_timer_timeout"]
