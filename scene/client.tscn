@@ -74,11 +74,10 @@ show_percentage = false
 
 [node name="OrderSound" type="AudioStreamPlayer2D" parent="." unique_id=1458272379]
 stream = ExtResource("5_jgjsk")
-volume_db = 24.0
 
 [node name="AngrySound" type="AudioStreamPlayer2D" parent="." unique_id=1948654820]
 stream = ExtResource("6_16yn3")
-volume_db = 24.0
+volume_db = 10.0
 
 [node name="confusedsound" type="AudioStreamPlayer2D" parent="." unique_id=485211659]
 stream = ExtResource("7_h7r7o")

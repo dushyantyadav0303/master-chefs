@@ -3,7 +3,7 @@ extends Node2D
 
 
 
-var client_scene = preload("res://scene/Client.tscn")
+var client_scene = preload("res://scene/client.tscn")
 
 var positions_occupied = []
 

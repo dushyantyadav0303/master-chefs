@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://byobmyw3wa53k" path="res://assest/Ingredient/food/potato1.png" id="13_7sc4i"]
 [ext_resource type="Texture2D" uid="uid://blw22xxp07gwy" path="res://assest/sprites/plate.png" id="16_e8heu"]
 [ext_resource type="Texture2D" uid="uid://cky0rkewmnqpr" path="res://assest/sprites/coffee-machine.png" id="19_boyg6"]
-[ext_resource type="Texture2D" uid="uid://dcw4ft76n5e7" path="res://assest/sprites/white-mug.png" id="20_e36ub"]
+[ext_resource type="Texture2D" uid="uid://bvw0eof2uifoq" path="res://assest/sprites/plates.png" id="21_iu0sx"]
 [ext_resource type="Script" uid="uid://cgvtpv0b884d1" path="res://script/plate.gd" id="23_qhcbd"]
 [ext_resource type="Texture2D" uid="uid://16tmctww04ge" path="res://assest/Ingredient/food/9pancake.png" id="24_36jdj"]
 [ext_resource type="Script" uid="uid://chpe0qkh27tq3" path="res://script/griller.gd" id="24_bnpwn"]
@@ -34,6 +34,8 @@
 [ext_resource type="Texture2D" uid="uid://dpjxif6e51d61" path="res://assest/Ingredient/food/I_cheese.png" id="28_7knny"]
 [ext_resource type="Texture2D" uid="uid://bwybqjqxt36k0" path="res://assest/Ingredient/food/018_citron.png" id="29_082n1"]
 [ext_resource type="Texture2D" uid="uid://dumbl3qannpj6" path="res://assest/Ingredient/food/9pancake-cooked.png" id="30_xex6t"]
+[ext_resource type="Texture2D" uid="uid://5udashrkrbfl" path="res://assest/sprites/white-mug1.png" id="34_aa0lp"]
+[ext_resource type="AudioStream" uid="uid://cx2terefsdili" path="res://sound/coffee-sound.mp3" id="35_aa0lp"]
 [ext_resource type="Script" uid="uid://422kmm8vje13" path="res://script/client_spawner.gd" id="35_xex6t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eow3j"]
@@ -375,10 +377,10 @@ anchor_left = 0.423
 anchor_top = 0.94200003
 anchor_right = 0.423
 anchor_bottom = 0.94200003
-offset_left = -845.16003
-offset_top = -1073.3601
-offset_right = 1202.84
-offset_bottom = 79.63995
+offset_left = -807.16003
+offset_top = -1025.3601
+offset_right = 1240.84
+offset_bottom = 127.63995
 scale = Vector2(0.9421049, 0.91999996)
 texture = ExtResource("6_f1jbl")
 
@@ -387,10 +389,10 @@ anchors_preset = -1
 anchor_left = 0.37109375
 anchor_right = 1.2006993
 anchor_bottom = 0.18995146
-offset_left = -876.6328
-offset_top = -76.0
-offset_right = -1535.3384
-offset_bottom = -176.08856
+offset_left = -844.5
+offset_top = -62.0
+offset_right = -1503.2056
+offset_bottom = -162.08856
 grow_horizontal = 2
 scale = Vector2(2.335683, 3.3466692)
 alignment = 1
@@ -636,22 +638,32 @@ scale = Vector2(-1.5267305, 5.280821)
 texture = ExtResource("12_vaj68")
 
 [node name="plate" type="Node2D" parent="ingredients layer" unique_id=45250385]
-position = Vector2(980, 686)
+position = Vector2(870.69904, 725.00006)
+scale = Vector2(1.9752083, 1.1718256)
 script = ExtResource("23_qhcbd")
 
+[node name="plate-stack" type="TextureRect" parent="ingredients layer/plate" unique_id=397475288]
+offset_left = 107.22491
+offset_top = -119.47175
+offset_right = 155.22491
+offset_bottom = -71.47175
+scale = Vector2(2.3036559, 3.8834887)
+texture = ExtResource("21_iu0sx")
+
 [node name="Plate pic" type="TextureRect" parent="ingredients layer/plate" unique_id=989871711]
-offset_left = -83.72232
-offset_top = -70.0
-offset_right = 81.27768
-offset_bottom = 70.0
+offset_left = -119.16401
+offset_top = -73.55252
+offset_right = 45.83599
+offset_bottom = 66.44748
+scale = Vector2(1.4200003, 1.1016805)
 texture = ExtResource("16_e8heu")
 
 [node name="plate Button" type="Button" parent="ingredients layer/plate" unique_id=241025622]
-offset_left = -50.981598
-offset_top = -27.999998
-offset_right = -2.981598
-offset_bottom = 3.000002
-scale = Vector2(2.2800026, 1.6799976)
+offset_left = 119.656784
+offset_top = -81.92351
+offset_right = 167.65677
+offset_bottom = -50.923508
+scale = Vector2(1.7026327, 1.3355286)
 theme_override_colors/font_color = Color(0.9428692, 0.27933386, 0.3056225, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5fw58")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_nvl6m")
@@ -773,13 +785,13 @@ script = ExtResource("24_vaj68")
 [node name="Sprite2D" type="Sprite2D" parent="coffee machine" unique_id=391223593]
 position = Vector2(497, 578.00006)
 scale = Vector2(4.6333127, 4.5154)
-texture = ExtResource("20_e36ub")
+texture = ExtResource("34_aa0lp")
 
 [node name="coffee Button" type="Button" parent="coffee machine" unique_id=1516104853]
-offset_left = 347.87033
-offset_top = 455.0
-offset_right = 536.87036
-offset_bottom = 635.0
+offset_left = 346.84717
+offset_top = 512.0
+offset_right = 535.84717
+offset_bottom = 692.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_cfc7e")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_cfc7e")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_cfc7e")
@@ -801,6 +813,9 @@ scale = Vector2(1, 0.68000185)
 theme_override_styles/background = SubResource("StyleBoxFlat_7irnc")
 theme_override_styles/fill = SubResource("StyleBoxFlat_e36ub")
 show_percentage = false
+
+[node name="coffee-sound" type="AudioStreamPlayer" parent="coffee machine" unique_id=1199667395]
+stream = ExtResource("35_aa0lp")
 
 [node name="client-spawner" type="Node2D" parent="." unique_id=951247173]
 z_index = -1

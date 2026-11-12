@@ -13,14 +13,14 @@ func on_coffee_button_pressed():
 		if get_parent().item_held == 'none':
 			is_busy = false
 			filled = false
-			$coffee.texture = null
+			$Sprite2D.texture = preload("res://assest/sprites/white-mug1.png")
 			$ProgressBar.value = 0
 			get_parent().item_held = 'coffee'
 			return
 	if is_busy:
 		return
-	$coffee.texture = drink_cup_texture
-	$colafilling.play()
+	$Sprite2D.texture = drink_cup_texture
+	$"coffee-sound".play()
 	is_busy = true
 	filled = false
 	$ProgressBar.value = 0

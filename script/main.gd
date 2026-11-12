@@ -8,7 +8,7 @@ var balance = 0
 var total_sandwiches_sold = 0
 
 func _ready():
-	AudioServer.set_bus_volume_db(0, -32)
+
 	$"CanvasLayer/HBoxContainer/sandwich sold".text = 'Total sandwiches sold: ' + str(total_sandwiches_sold) + "    "
 	$"CanvasLayer/HBoxContainer/balance".text = 'Balance' + str(balance) + "Rs "
 	
@@ -20,9 +20,10 @@ func _ready():
 	$"ingredients layer/potato/potato Button".pressed.connect(func(): on_ingredient_pressed('potato'))
 	#$"griller/TextureRect2/griller button".pressed.connect(on_griller_pressed)
 	#$"boiler/boiler Button".pressed.connect(on_boiler_pressed)
-
+	$"ingredients layer/plate/Plate pic".hide()
 func on_ingredient_pressed(ingredient_name: String):
 	if ingredient_name == 'potato':
+		print("aluuu")
 		return
 	#$"ingredients layer/AudioStreamPlayer".play()
 	plate.add_ingredient(ingredient_name)
@@ -42,6 +43,7 @@ func reset_plate() -> void:
 	plate.bottom_bread_added = false
 	plate.top_bread_added = false
 	plate.has_cheese = false
+	$"ingredients layer/plate/Plate pic".hide()
 	plate.plate_name = 'none'
 	plate.potato_counter = 0
 	
@@ -50,7 +52,9 @@ func reset_plate() -> void:
 	
 func _on_plate_button_pressed() -> void:
 	if item_held == 'none':
-		item_held =$plate.plate_name
+		item_held =$"ingredients layer/plate".plate_name
+		$"ingredients layer/plate/Plate pic".show()
+		print("plate dedo")
 
 func append_balance(type):
 	if type == 'coffee':

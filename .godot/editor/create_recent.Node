@@ -1,6 +1,6 @@
-Sprite2D
 TextureRect
 AudioStreamPlayer
+Sprite2D
 AudioStreamPlayer2D
 ProgressBar
 Label
