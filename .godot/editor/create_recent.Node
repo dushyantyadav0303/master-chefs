@@ -1,8 +1,8 @@
+AudioStreamPlayer
+TextureRect
 TextureButton
 Button
 Sprite2D
-AudioStreamPlayer
-TextureRect
 AudioStreamPlayer2D
 ProgressBar
 Label
