@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b4bqmp3f21c28"]
+[gd_scene format=3 uid="uid://cl654dcewii51"]
 
 [ext_resource type="Texture2D" uid="uid://do281alyc2d3w" path="res://assest/sprites/wooden-counter-large.png" id="1_80cx4"]
 [ext_resource type="Script" uid="uid://8h6i4mdod7pv" path="res://script/main.gd" id="1_qhcbd"]

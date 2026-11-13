@@ -13,7 +13,11 @@ config_version=5
 config/name="master-chefs"
 run/main_scene="uid://b4bqmp3f21c28"
 config/features=PackedStringArray("4.7", "Mobile")
+boot_splash/bg_color=Color(0.9272479, 0.8180407, 0.57229996, 1)
+boot_splash/use_filter=false
+boot_splash/image="uid://dc61025w61v3s"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=2000
 
 [display]
 
