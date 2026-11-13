@@ -1,9 +1,9 @@
 res://addons/godot_super-wakatime/api_key_prompt.tscn::e3a85f203ad4122ff9f20c8c8ea0f5db::1794565169::res://.godot/exported/133200997/export-cd8705cb5e2533bd79c64579ac674dae-api_key_prompt.scn
 res://addons/godot_super-wakatime/counter.tscn::f478b3e6b88ac4c47e300a6a312bdd33::1794565169::res://.godot/exported/133200997/export-4af6c9115c1c285af5925fa1ce6a526e-counter.scn
-res://scene/client.tscn::9123ac685dd83eda2e5346a79e5cdd20::1794565169::res://.godot/exported/133200997/export-21a6a2d828ffda66811746fec9e9563d-client.scn
 res://scene/clientbar.tres::021d29d78824041a678bfc13324b8175::1794565169::res://.godot/exported/133200997/export-af78a1bd5c2d605b4ed389402c780766-clientbar.res
 res://scene/clientbar_angry.tres::407070a8deee07879d4ff706abeacc6d::1794565169::res://.godot/exported/133200997/export-04ba858472b98c92d251adba87cd8b68-clientbar_angry.res
 res://scene/client_bar.tres::873438c01267ed9ae0b97a2ff46ff2b9::1794565169::res://.godot/exported/133200997/export-620c68e7048e64d30f1f6f54f6f4f431-client_bar.res
-res://scene/game.tscn::d793ab8ea4214bc04c35eca96b4f374a::1794565169::res://.godot/exported/133200997/export-caa10c3bd03e8ed3318171f5303f6366-game.scn
+res://scene/game.tscn::8128a8dcc53703c89cf85b4144eda06e::1794569239::res://.godot/exported/133200997/export-caa10c3bd03e8ed3318171f5303f6366-game.scn
 res://default_bus_layout.tres::30e7e3f99a7ea7e52eb579611754dec6::1794565169::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
 res://game.tscn::11cd3edf48a8f7be364892fc4dcd4946::1794565169::res://.godot/exported/133200997/export-609f762188a68253d349ec58c4f3a8d3-game.scn
+res://scene/client.tscn::f792bdac4ca60beff577f1c796840672::1794569325::res://.godot/exported/133200997/export-21a6a2d828ffda66811746fec9e9563d-client.scn
