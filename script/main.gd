@@ -49,6 +49,7 @@ func reset_plate() -> void:
 	plate.bottom_bread_added = false
 	plate.top_bread_added = false
 	plate.has_cheese = false
+	plate.plate = false
 	$"ingredients layer/plate/Plate pic".hide()
 	plate.plate_name = 'none'
 	plate.potato_counter = 0
@@ -60,6 +61,7 @@ func _on_plate_button_pressed() -> void:
 	if item_held == 'none':
 		item_held =$"ingredients layer/plate".plate_name
 		$"ingredients layer/plate/Plate pic".show()
+		plate.plate = true
 		print("plate dedo")
 		
 

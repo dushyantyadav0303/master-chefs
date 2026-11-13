@@ -5,12 +5,16 @@ var stack := []
 var bottom_bread_added := false
 var potato_added := false
 var top_bread_added := false
+var plate = false
 
 var potato_counter = 0 
 var has_cheese = false
 var plate_name = ''
 
+
 func add_ingredient(type: String):
+	if not plate and type == 'bread':
+		return
 	if top_bread_added : return
 	if not bottom_bread_added and not type  == 'bread':
 		return 

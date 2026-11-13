@@ -1,11 +1,11 @@
-AudioStreamPlayer
+Label
 TextureRect
 TextureButton
+AudioStreamPlayer
 Button
 Sprite2D
 AudioStreamPlayer2D
 ProgressBar
-Label
 VBoxContainer
 Node2D
 Timer

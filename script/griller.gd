@@ -39,6 +39,7 @@ func start_cooking():
 		$"../cooking".stop()
 		$"../burned".play()
 		%pattie.texture = burned_texture
+		cooked = false
 		burned = true
 
 func reset():

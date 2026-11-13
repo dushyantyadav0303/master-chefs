@@ -41,6 +41,14 @@
 [ext_resource type="AudioStream" uid="uid://mo0cbkr1yx78" path="res://sound/cooking.mp3" id="38_4v2jo"]
 [ext_resource type="AudioStream" uid="uid://bp42h0rnyutyi" path="res://sound/burning.mp3" id="39_l1i01"]
 [ext_resource type="AudioStream" uid="uid://b8vbp4kdg5qwu" path="res://sound/whoshh.mp3" id="41_klri6"]
+[ext_resource type="Texture2D" uid="uid://ddc3km4tcqyyp" path="res://assest/Recipe Book Icon.png" id="42_eu6ph"]
+[ext_resource type="Script" uid="uid://cidm7a8m0w7mk" path="res://script/Recipe-book.gd" id="43_edr7y"]
+[ext_resource type="Texture2D" uid="uid://mguondl38gbe" path="res://assest/close.png" id="44_kq12w"]
+[ext_resource type="Texture2D" uid="uid://c8130t6ge7e6e" path="res://Book/Book_Back.png" id="45_t46w6"]
+[ext_resource type="Texture2D" uid="uid://f5u7s1m5n71j" path="res://assest/Recipe book/Sandwich-Photoroom.png" id="46_87ddb"]
+[ext_resource type="Texture2D" uid="uid://bp1nsx4cabtht" path="res://assest/Recipe book/chesse Sandwich-Photoroom.png" id="47_mljfx"]
+[ext_resource type="Texture2D" uid="uid://c35p2sx4a1j4a" path="res://assest/Recipe book/2cs-Photoroom.png" id="48_qpefm"]
+[ext_resource type="Texture2D" uid="uid://bkj6e6836rgnd" path="res://assest/Recipe book/double pettie Sandwich-Photoroom.png" id="49_tb2lt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eow3j"]
 bg_color = Color(0.6901961, 0.49411765, 0.8862745, 0.64705884)
@@ -906,10 +914,137 @@ stream = ExtResource("39_l1i01")
 [node name="whoosh" type="AudioStreamPlayer" parent="." unique_id=1533341040]
 stream = ExtResource("41_klri6")
 
-[node name="recipe book" type="TextureRect" parent="." unique_id=853952126]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Recipe book" type="TextureButton" parent="." unique_id=494458302]
+offset_left = 926.97205
+offset_top = 760.00006
+offset_right = 2462.9722
+offset_bottom = 1784.0
+scale = Vector2(0.0902888, 0.10000677)
+texture_normal = ExtResource("42_eu6ph")
+script = ExtResource("43_edr7y")
+
+[node name="close" type="TextureButton" parent="Recipe book" unique_id=807705413]
+z_index = 37
+layout_mode = 0
+offset_left = 3490.24
+offset_top = -5829.6064
+offset_right = 3750.24
+offset_bottom = -5549.6064
+scale = Vector2(4.786645, 3.2464383)
+texture_normal = ExtResource("44_kq12w")
+
+[node name="book" type="TextureRect" parent="Recipe book" unique_id=1169101064]
+z_index = 30
+layout_mode = 0
+offset_left = -6821.8335
+offset_top = -5999.5947
+offset_right = -4630.8633
+offset_bottom = -4527.635
+scale = Vector2(5.4514084, 4.1098876)
+mouse_filter = 2
+texture = ExtResource("45_t46w6")
+
+[node name="Sandwich" type="TextureRect" parent="Recipe book" unique_id=267439016]
+z_index = 60
+layout_mode = 0
+offset_left = -6697.1816
+offset_top = -5699.615
+offset_right = -5161.1816
+offset_bottom = -4302.252
+scale = Vector2(1.93263, 1.5020089)
+texture = ExtResource("46_87ddb")
+
+[node name="Label" type="Label" parent="Recipe book/Sandwich" unique_id=997073395]
+z_index = 125
+layout_mode = 0
+offset_left = 1460.008
+offset_top = 173.08978
+offset_right = 2577.0054
+offset_bottom = 803.055
+scale = Vector2(1.3429801, 1.8942014)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+text = "Normal Sandwich
+ Bottom bread
+1 cooked potato patty
+Top bread"
+
+[node name="Cheese sandwich" type="TextureRect" parent="Recipe book" unique_id=1058372207]
+z_index = 60
+layout_mode = 0
+offset_left = -3898.1907
+offset_top = -2079.8599
+offset_right = -2362.1907
+offset_bottom = -1055.8599
+scale = Vector2(1.93263, 1.5020089)
+texture = ExtResource("47_mljfx")
+
+[node name="Label" type="Label" parent="Recipe book/Cheese sandwich" unique_id=1904550483]
+z_index = 125
+layout_mode = 0
+offset_left = -1348.6017
+offset_top = -139.8034
+offset_right = -231.60437
+offset_bottom = 492.1966
+scale = Vector2(1.3429801, 1.8942014)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+text = "Cheese Sandwich
+Bottom bread
+1 cooked potato patty
+Cheese
+Top bread"
+
+[node name="Double chesse sandwich" type="TextureRect" parent="Recipe book" unique_id=1389689764]
+z_index = 60
+layout_mode = 0
+offset_left = -759.2409
+offset_top = -2079.8599
+offset_right = 776.7591
+offset_bottom = -1055.8599
+scale = Vector2(1.93263, 1.5020089)
+texture = ExtResource("48_qpefm")
+
+[node name="Label" type="Label" parent="Recipe book/Double chesse sandwich" unique_id=1563351376]
+z_index = 125
+layout_mode = 0
+offset_left = 1424.8271
+offset_top = -126.48872
+offset_right = 2541.8247
+offset_bottom = 505.5113
+scale = Vector2(1.3429801, 1.8942014)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+text = "Double Cheese Sandwich
+Bottom bread
+2x cooked potato patties
+2x  Cheese
+Top bread"
+
+[node name="double pettie Sandwich" type="TextureRect" parent="Recipe book" unique_id=1471095671]
+z_index = 60
+layout_mode = 0
+offset_left = 2062.4146
+offset_top = -5229.647
+offset_right = 3598.4146
+offset_bottom = -4205.647
+scale = Vector2(1.93263, 1.5020089)
+texture = ExtResource("49_tb2lt")
+
+[node name="Label" type="Label" parent="Recipe book/double pettie Sandwich" unique_id=982569262]
+z_index = 125
+layout_mode = 0
+offset_left = -1313.4209
+offset_top = 53.257973
+offset_right = -196.42358
+offset_bottom = 683.2232
+scale = Vector2(1.3429801, 1.8942014)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+text = "Double Patty Sandwich
+Bottom bread
+2 cooked potato patties
+Top bread"
 
 [connection signal="pressed" from="trash Button" to="." method="_on_trash_button_pressed"]
 [connection signal="pressed" from="ingredients layer/cabbage/cabbage Button" to="." method="_on_cabbage_button_pressed"]
@@ -918,3 +1053,5 @@ offset_bottom = 40.0
 [connection signal="pressed" from="griller/griller button" to="griller" method="_on_griller_button_pressed"]
 [connection signal="pressed" from="coffee machine/coffee Button" to="." method="_on_coffee_button_pressed"]
 [connection signal="timeout" from="client-spawner/spawn Timer" to="client-spawner" method="_on_spawn_timer_timeout"]
+[connection signal="pressed" from="Recipe book" to="Recipe book" method="_on_pressed"]
+[connection signal="pressed" from="Recipe book/close" to="Recipe book" method="_on_close_pressed"]
